@@ -32,7 +32,7 @@ function BrandAbout() {
               rel="noopener noreferrer"
               className="inline-block bg-deep-brown hover:bg-gold text-white text-sm px-9 py-4 tracking-[0.2em] transition-colors duration-300"
             >
-              상담 예약하기
+              시술 예약하기
             </a>
           </div>
 

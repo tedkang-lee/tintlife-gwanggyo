@@ -35,7 +35,7 @@ export default function ServiceGallery() {
   }
 
   return (
-    <section id="service-gallery" className="py-24 sm:py-32 bg-cream">
+    <section id="pricing" className="py-24 sm:py-32 bg-cream">
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
 
         <div className="text-center mb-16">

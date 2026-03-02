@@ -1,6 +1,8 @@
 import Navbar from '../components/Navbar'
 import HeroVideo from '../components/HeroVideo'
 import ReviewsSection from '../components/ReviewsSection'
+import ServiceGallery from '../components/ServiceGallery'
+import NaverMap from '../components/NaverMap'
 import config from '../config/branch.config'
 import { fetchReviews } from '../lib/sheets'
 
@@ -148,13 +150,8 @@ function Location() {
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          {/* 지도 플레이스홀더 */}
-          <div className="aspect-[4/3] bg-deep-brown/5 border border-deep-brown/10 flex flex-col items-center justify-center gap-3">
-            <div className="w-10 h-10 rounded-full border-2 border-deep-brown/20 flex items-center justify-center">
-              <div className="w-2 h-2 rounded-full bg-gold" />
-            </div>
-            <p className="text-deep-brown/30 text-xs tracking-[0.3em] uppercase">Map</p>
-            <p className="text-deep-brown/25 text-xs">{config.branch.address}</p>
+          <div className="aspect-[4/3] overflow-hidden">
+            <NaverMap address={config.branch.address} />
           </div>
 
           {/* 매장 정보 */}
@@ -329,6 +326,7 @@ export default async function Home() {
         <HeroVideo />
         <BrandAbout />
         <Services />
+        <ServiceGallery />
         <Reviews reviews={reviews} />
         <Location />
         <Footer />

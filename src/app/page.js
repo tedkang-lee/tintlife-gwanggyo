@@ -270,6 +270,16 @@ function Footer() {
               </li>
               <li>
                 <a
+                  href="https://litt.ly/tintlife"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm hover:text-gold transition-colors duration-200"
+                >
+                  틴트라이프 정보
+                </a>
+              </li>
+              <li>
+                <a
                   href={`tel:${config.branch.phone}`}
                   className="text-sm hover:text-gold transition-colors duration-200"
                 >

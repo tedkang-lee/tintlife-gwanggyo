@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-const PER_PAGE = 9
+const PER_PAGE = 6
 
 export default function ReviewsSection({ reviews, blogUrl }) {
   const [page, setPage] = useState(1)
@@ -91,17 +91,6 @@ export default function ReviewsSection({ reviews, blogUrl }) {
         </>
       )}
 
-      {/* 블로그 더 보기 버튼 */}
-      <div className="text-center mt-12">
-        <a
-          href={blogUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block border border-deep-brown text-deep-brown hover:bg-deep-brown hover:text-white text-sm px-10 py-4 tracking-[0.2em] transition-colors duration-300"
-        >
-          블로그 후기 더 보기
-        </a>
-      </div>
     </div>
   )
 }

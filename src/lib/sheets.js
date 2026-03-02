@@ -12,11 +12,11 @@ export async function fetchReviews() {
     `/export?format=csv&sheet=${encodeURIComponent(SHEET_NAME)}`
 
   try {
-    // 개발: 매 요청마다 최신 데이터 / 프로덕션: 빌드 타임 정적 캐싱
+    // 개발: 매 요청마다 최신 데이터 / 프로덕션: 1시간마다 재검증 (ISR)
     const cacheOption =
       process.env.NODE_ENV === 'development'
         ? { cache: 'no-store' }
-        : { cache: 'force-cache' }
+        : { next: { revalidate: 3600 } }
     const res = await fetch(url, cacheOption)
     if (!res.ok) {
       console.warn(`[sheets] fetch failed: ${res.status}`)
